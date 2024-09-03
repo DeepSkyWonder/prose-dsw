@@ -309,6 +309,18 @@ class Image:
         """
         self.computed[name] = value
 
+    def set_meta(self, name: str, value):
+        """Set a metadata value
+
+        Parameters
+        ----------
+        name : str
+            name of the computed value
+        value : any
+            value to set
+        """
+        __setattr__(self, name, value)
+
     def get(self, name):
         """Get computed value
 
