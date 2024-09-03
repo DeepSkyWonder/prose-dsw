@@ -223,10 +223,18 @@ class Image:
         """Right-Ascension as an astropy Quantity"""
         return self._from_metadata_with_unit("ra")
 
+    @ra.setter
+    def ra(self, value):
+        self.metadata['ra'] = value
+
     @property
     def dec(self):
         """Declination as an astropy Quantity"""
         return self._from_metadata_with_unit("dec")
+    
+    @dec.setter
+    def dec(self, value):
+        self.metadata['dec'] = value
 
     @property
     def exposure(self):
