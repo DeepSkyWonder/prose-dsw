@@ -319,7 +319,7 @@ class Image:
         value : any
             value to set
         """
-        self.__setattr__(self, name, value)
+        self.__setattr__(name, value)
 
     def get(self, name):
         """Get computed value
